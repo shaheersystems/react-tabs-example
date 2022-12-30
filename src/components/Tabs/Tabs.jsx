@@ -4,6 +4,9 @@ import TabsData from "./TabData";
 function Tabs() {
   const [data, setData] = useState(TabsData);
   const [current, setCurrent] = useState(1);
+  const currentTabContent = data.filter((item) => {
+    return item.id === current;
+  });
   useEffect(() => {
     setData(TabsData);
   }, []);
@@ -22,7 +25,9 @@ function Tabs() {
         })}
       </div>
       <div className='w-fit py-8 min-h-fit'>
-        <p className='font-'>{data[current - 1].content}</p>
+        {currentTabContent.map((item) => {
+          return <p className='text-3xl font-light'>{item.content}</p>;
+        })}
       </div>
     </div>
   );
