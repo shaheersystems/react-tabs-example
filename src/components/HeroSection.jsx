@@ -10,7 +10,7 @@ function HeroSection() {
         This is react custom dynamic tabs example.
       </p>
       <a
-        href='/'
+        href='https://github.com/shaheersystems/react-tabs-example'
         className='bg-blue-800 hover:bg-blue-600 font-semibold text-white px-5 py-2 rounded'
       >
         Github Repository
